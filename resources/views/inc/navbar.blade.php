@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark pt-4 px-0">
     <a class="navbar-brand" href="#">
-      <img src="{{ asset('images/shards-logo-white.svg') }}" class="mr-2" alt="Vibro">
-      Vibro
+      <img src="{{ asset('images/shards-logo-white.svg') }}" class="mr-2" alt="Virbro">
+      {{config('app.name', 'Virbro')}}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
