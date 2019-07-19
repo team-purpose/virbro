@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', 'PagesController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/home/insured', 'HomeController@insured');
+Route::get('/home/insured/new', 'HomeController@insure_new');
+Route::get('/home/claims', 'HomeController@claims');
+Route::get('/home/claims/new', 'HomeController@claim_new');
+Route::get('/home/users', 'HomeController@user');

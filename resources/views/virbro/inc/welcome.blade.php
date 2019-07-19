@@ -14,7 +14,7 @@
             <a href="#our-services" class="btn btn-lg btn-outline-white btn-pill align-self-center">Start now</a>
         </div>
         <div class="col-md-3">
-        <img class="side-image" src="{{asset('images/undraw_progress_tracking.svg')}}" alt="">
+        <!-- <img class="side-image" src="{{asset('images/undraw_progress_tracking.svg')}}" alt=""> -->
         </div>
       </div>
     </div>
