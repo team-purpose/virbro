@@ -20,4 +20,5 @@ Route::get('/home/insured', 'HomeController@insured');
 Route::get('/home/insured/new', 'HomeController@insure_new');
 Route::get('/home/claims', 'HomeController@claims');
 Route::get('/home/claims/new', 'HomeController@claim_new');
+Route::get('/home/wallet', 'HomeController@wallet');
 Route::get('/home/users', 'HomeController@user');

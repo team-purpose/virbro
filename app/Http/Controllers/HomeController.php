@@ -30,14 +30,14 @@ class HomeController extends Controller
 
     public function insured(){
         $data = [
-            'title' => 'Insured Items',
+            'title' => 'Assets',
         ];
         return view('dash.insured')->with($data);
     }
 
     public function insure_new(){
         $data = [
-            'title' => 'Insure New Item',
+            'title' => 'Add new asset',
         ];
         return view('dash.insure_new')->with($data);
     }
@@ -54,6 +54,13 @@ class HomeController extends Controller
             'title' => 'New Claim',
         ];
         return view('dash.claim_new')->with($data);
+    }
+
+    public function wallet(){
+        $data = [
+            'title' => 'Wallet',
+        ];
+        return view('dash.wallet')->with($data);
     }
 
     public function user(){

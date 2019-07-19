@@ -2,23 +2,6 @@
 
 @section('content')
 
-@if (session('status'))
-    <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">×</span>
-		</button>
-		<i class="fa fa-check mx-2"></i>
-		{{ session('status') }} 
-	</div>
-@endif
-<!-- Page Header -->
-<div class="page-header row no-gutters py-4">
-  <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-    <span class="text-uppercase page-subtitle">{{$title}}</span>
-    <h3 class="page-title">Insurance Overview</h3>
-  </div>
-</div>
-<!-- End Page Header -->
 <div class="row">
 	<div class="col-md-12 col-lg-4 my-2">
 		<div class="card card-small" style="background-image: url({{ asset('images/bg.png') }});">
