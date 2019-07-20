@@ -16,3 +16,18 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// List Assets
+Route::get('assets', 'AssetController@index');
+
+// List Single Asset
+Route::get('asset/{id}', 'AssetController@show');
+
+// Create new Asset
+Route::post('asset', 'AssetController@store');
+
+// Update Asset
+Route::put('asset', 'AssetController@store');
+
+// List Assets
+Route::delete('asset/{id}', 'AssetController@destroy');

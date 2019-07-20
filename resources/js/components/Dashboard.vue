@@ -1,13 +1,10 @@
-@extends('layouts.dash')
-
-@section('content')
-
-<div class="row">
+<template>
+	<div class="row">
 	<div class="col-md-12 col-lg-4 my-2">
-		<div class="card card-small" style="background-image: url({{ asset('images/bg.png') }});">
+		<div class="card card-small" style="background-image: url('/images/bg.png') }});">
 			<div class="card-header border-bottom text-center" style="background: transparent;">
 				<div class="mb-3 mx-auto">
-					<img width="" class="rounded-circle img-fluid" src="{{ asset('images/avatars/0.jpg') }}">
+					<img width="" class="rounded-circle img-fluid" src="/images/avatars/0.jpg">
 				</div>
 				<h4 class="mb-" style="color: #fff;">Sierra Brooks</h4>
 			</div>
@@ -20,78 +17,28 @@
 	<div class="col-md-12 col-lg-8 my-2">
 	    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
 	        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-	            <div class="carousel-item col-md-3  active">
-	               <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 1" class="thumb">
-	                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=1" alt="slide 1">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	               <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 3" class="thumb">
-	                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=2" alt="slide 2">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	               <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 4" class="thumb">
-	                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=3" alt="slide 3">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	                <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 5" class="thumb">
-	                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=4" alt="slide 4">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	              <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 6" class="thumb">
-	                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=5" alt="slide 5">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	               <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 7" class="thumb">
-	                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=6" alt="slide 6">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	            <div class="carousel-item col-md-3 ">
-	               <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 8" class="thumb">
-	                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=7" alt="slide 7">
-	                    </a>
-	                  </div>
-	                </div>
-	            </div>
-	             <div class="carousel-item col-md-3  ">
-	                <div class="panel panel-default">
-	                  <div class="panel-thumbnail">
-	                    <a href="#" title="image 2" class="thumb">
-	                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=8" alt="slide 8">
-	                    </a>
-	                  </div>
-	                  
-	                </div>
+	            <div class="carousel-item col-md-4 active" v-for="asset in assets" v-bind:key="asset.id">
+	            	<div class="card card-small card-post card-post--1 px-0">
+						<div class="card-post__image" style="background-image: url('/images/content-management/6.jpeg');">
+							<a href="#" class="card-post__category badge badge-pill badge-light">Insured</a>
+						</div>
+						<div class="card-body p-0">
+							<ul class="list-group list-group-small list-group-flush">
+								<li class="list-group-item d-flex px-3">
+									<span class="text-semibold text-fiord-blue">{{ asset.name }}<br><small>{{asset.category}}</small></span>
+									<span class="ml-auto text-right text-semibold text-reagent-gray"><a href="#">Edit</a></span>
+								</li>
+								<li class="list-group-item d-flex px-3">
+									<span class="text-semibold text-fiord-blue">Insured value</span>
+									<span class="ml-auto text-right text-semibold text-reagent-gray">NGN {{ asset.value }}</span>
+								</li>
+								<li class="list-group-item d-flex px-3">
+									<span class="text-semibold text-fiord-blue">Premium</span>
+									<span class="ml-auto text-right text-semibold text-reagent-gray">NGN {{asset.premium}}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 	            </div>
 	        </div>
 	        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
@@ -157,7 +104,7 @@
 						<div class="d-flex flex-column m-auto">
 							<div class="stats-small__data text-center border-bottom">
 								<span class="stats-small__label text-uppercase">Items Insured</span>
-								<h6 class="stats-small__value count my-3">0</h6>
+								<h6 class="stats-small__value count my-3">{{ assets.length }}</h6>
 							</div>
 							<div class="stats-small__data">
 								<span class="text-uppercase"><a href="#">View all</a></span>
@@ -184,5 +131,36 @@
 		</div>
 	</div>
 </div>
-        
-@endsection
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				assets: [],
+				asset: {
+					id: '',
+					name: '',
+					category: '',
+					value: '',
+					premium: '',
+					insured: '',
+				},
+				article_id: '',
+				edit:false,
+			};
+		},
+		created(){
+			this.fetchAssets();
+		},
+		methods: {
+			fetchAssets(){
+				fetch('api/assets')
+					.then(res => res.json())
+					.then(res => {
+						this.assets = res.data;
+					});
+			}
+		}
+	}
+</script>

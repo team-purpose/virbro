@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dash')
 
 @section('content')
 
@@ -35,6 +35,17 @@
 							</div>
 						</div>
 						<div class="form-group">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">NGN</span>
+								</div>
+								<input type="text" class="form-control" aria-label="Amount (to the nearest naira)" value="" placeholder="Premium" >
+								<div class="input-group-append">
+									<span class="input-group-text">.00</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
 							<label>Additional Photos</label>
 							<input type="file" name="" class="form-control">
 						</div>
@@ -48,8 +59,10 @@
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</details>
 					</div>
-
-					<button class="btn btn-primary btn-block"> Submit Claim </button>
+					<div class="d-flex">
+						<button class="btn btn-primary mx-2"> Insure </button>
+						<button class="btn btn-default mx-2"> Save </button>
+					</div>
 				</div>
 			</div>
 		</form>

@@ -17,8 +17,9 @@ class CreateAssetsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('category');
-            $table->string('estimated_value');
-            $table->string('coverage');
+            $table->string('value');
+            $table->string('premium');
+            $table->string('insured');
             $table->timestamps();
         });
     }

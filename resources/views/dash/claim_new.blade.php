@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dash')
 
 @section('content')
 
@@ -26,11 +26,6 @@
 						<div class="custom-control">
 							<input type="radio" class="custom-control-input" name="incidentType"><label class="custom-control-label">damage</label>
 						</div>
-						<small class="text-primary"></small>
-					</div>
-					<div class="form-group">
-						<label class="lead">When did the incident happen</label>
-						<input type="text" class="form-control" name="dateOccured">
 						<small class="text-primary"></small>
 					</div>
 					<div class="form-group">
